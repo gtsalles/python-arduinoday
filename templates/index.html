@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row demo-row">
+        <div class="col-xs-4">
+          <a href="/cores/verde" class="btn btn-block btn-lg btn-success">LED Verde</a>
+        </div>
+        <div class="col-xs-4">
+          <a href="/cores/amarelo" class="btn btn-block btn-lg btn-warning">LED Amarelo</a>
+        </div>
+        <div class="col-xs-4">
+          <a href="/cores/vermelho" class="btn btn-block btn-lg btn-danger">LED Vermelho</a>
+        </div>
+        <br/><br/><br/>
+        <div class="col-xs-12">
+            <a href="/cores/desliga" class="btn btn-block btn-lg btn-inverse">Desligar</a>
+        </div>
+      </div> <!-- /row -->
+{% endblock %}

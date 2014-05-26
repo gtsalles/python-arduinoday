@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row demo-row">
+        <div class="col-xs-12">
+            <div class="switch">
+                <input type="checkbox" id="ligar" data-toggle="switch" name="switch"/>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extrajs %}
+    <script src="/static/js/jquery.query-object.js"></script>
+    <script>
+        var ligar = $('#ligar');
+        ligar.change(function(){
+            if (ligar.is(":checked")){
+                $.ajax({
+                    url: '/liga/4'
+                });
+            } else {
+                $.ajax({
+                    url: '/liga/0'
+                });
+            }
+        });
+    </script>
+{% endblock %}
